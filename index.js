@@ -1,13 +1,28 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  //iterate over array
+  for (let i = 0; i < array.length; i++) {
+    //find complimentary number
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      //see if array[j] is complimentary to array[i]
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
   Add your pseudocode here
+  iterate over array
+  find 2 numbers that equal target sum
+  if(i + j === target) return true
+
+
 */
 
 /*
